@@ -24,6 +24,8 @@ hist(totalSteps$steps)
 ```{r echo=TRUE}
 meanSteps <- mean(totalSteps$steps)
 medianSteps <- median(totalSteps$steps)
+meanSteps
+medianSteps
 ```
 
 Mean total number of steps taken per day is: `r meanSteps`  The median total number of steps taken per day is: `r medianSteps`
@@ -39,6 +41,7 @@ plot(steps ~ interval, data = meanIntervalSteps, type = "l")
 **Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps? **
 ```{r echo=TRUE}
 maxSteps <- meanIntervalSteps[which.max(meanIntervalSteps$steps), ]$interval
+maxSteps
 ```
 
 The `r maxSteps` 5-minute interval contains the maximum number of steps.
